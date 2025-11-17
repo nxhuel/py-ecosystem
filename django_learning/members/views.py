@@ -11,10 +11,6 @@ from members.serializer import MemberSerializer
 
 # Create your views here.
 
-# def members(request):
-#     template = loader.get_template('myfirst.html')
-#     return HttpResponse(template.render())
-
 class MemberApiView(APIView):
     def get(self, request):
         serializer = MemberSerializer(Member.objects.all(), many = True)
